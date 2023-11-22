@@ -104,11 +104,8 @@ const CharList = (props) => {
 
     const elements = useMemo(() => {
         return setContent(process, () => renderItems(charList), newItemLoading);
-        // eslint-disable-next-line
     }, [process])
-
-    // TransitionGroup работать не будет за счет постоянного пересоздания компонента
-    // разбор в следующем уроке
+    
     return (
         <div className="char__list">
             {elements}
